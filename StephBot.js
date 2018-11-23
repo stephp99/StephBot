@@ -29,47 +29,47 @@ const sexyeggz = [
 ]
 
 const shavingz = [
-'./images/shave1.gif',
-'./images/shave2.gif',
-'./images/shave3.gif',
-'./images/shave4.gif',
-'./images/shave5.gif',
-'./images/shave6.gif',
-'./images/shaving.gif',
+'./Images/shave1.gif',
+'./Images/shave2.gif',
+'./Images/shave3.gif',
+'./Images/shave4.gif',
+'./Images/shave5.gif',
+'./Images/shave6.gif',
+'./Images/shaving.gif',
 ]
 
 const yeetz = [
-'./images/yeet.gif',
-'./images/yeet1.gif',
-'./images/yeet2.gif',
+'./Images/yeet.gif',
+'./Images/yeet1.gif',
+'./Images/yeet2.gif',
 ]
 
 const ripz = [
-'./images/rip.gif',
-'./images/rip1.gif',
-'./images/rip2.gif',
-'./images/rip3.gif',
-'./images/rip4.gif',
+'./Images/rip.gif',
+'./Images/rip1.gif',
+'./Images/rip2.gif',
+'./Images/rip3.gif',
+'./Images/rip4.gif',
 ]
 
 const explodez = [
-'./images/bomb.gif',
-'./images/bomb1.gif',
-'./images/bomb2.gif',
-'./images/bomb3.gif',
-'./images/bomb4.gif',
-'./images/bomb5.gif',
-'./images/bomb6.gif',
+'./Images/bomb.gif',
+'./Images/bomb1.gif',
+'./Images/bomb2.gif',
+'./Images/bomb3.gif',
+'./Images/bomb4.gif',
+'./Images/bomb5.gif',
+'./Images/bomb6.gif',
 ]
 
 const arsoz = [
-'./images/fire1.gif',
-'./images/fire2.gif',
-'./images/fire3.gif',
-'./images/fire4.gif',
-'./images/fire5.gif',
-'./images/fire6.gif',
-'./images/fire7.gif',
+'./Images/fire1.gif',
+'./Images/fire2.gif',
+'./Images/fire3.gif',
+'./Images/fire4.gif',
+'./Images/fire5.gif',
+'./Images/fire6.gif',
+'./Images/fire7.gif',
 ]
 
 const hugz = [
