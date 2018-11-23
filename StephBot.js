@@ -1,5 +1,5 @@
 const discord = require ('discord.js');
-
+const profanities = require('profanities');
 var client = new discord.Client();
 
 const token = "NTE1MzQ4MzcxMzg1NjE0MzM2.DtkVmg.ldTxTGpBdTfqSp99IqyTgMGNuqw";
@@ -88,6 +88,14 @@ client.on ('guildMemberAdd', (member) => {
 client.on ("message", (message) => {
 	
 	mention = message.mentions.users.first();
+	
+	for (x=0; x < profanities.length; x++) {
+		if (message.content.toUpperCase() == profanities[x].toUpperCase()) {
+			message.channel.send("LANGUAGE \n <:Soap:515638223704162346>");
+			message.delete();
+			return;
+		}
+	}
 	
 	if(message.content.includes("hug")) {
 		if (message.isMentioned(client.user)) {
