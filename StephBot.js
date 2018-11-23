@@ -13,19 +13,19 @@ client.on ("ready", () => {
 const prefix = '$'
 
 const sexyeggz = [
-'./images/corset.jpg',
-'./images/sexybras.jpg',
-'./images/sexyeggs.png',
-'./images/humpty.png',
-'./images/tomabs.png',
-'./images/zenabs.jpg',
-'./images/tatumabs.jpg',
-'./images/abs.jpg',
-'./images/sexyregg.jpg',
-'./images/moreabs.jpeg',
-'./images/legabs.png',
-'./images/jasonabs.jpg',
-'./images/nickabs.jpg',
+'./Images/corset.jpg',
+'./Images/sexybras.jpg',
+'./Images/sexyeggs.png',
+'./Images/humpty.png',
+'./Images/tomabs.png',
+'./Images/zenabs.jpg',
+'./Images/tatumabs.jpg',
+'./Images/abs.jpg',
+'./Images/sexyregg.jpg',
+'./Images/moreabs.jpeg',
+'./Images/legabs.png',
+'./Images/jasonabs.jpg',
+'./Images/nickabs.jpg',
 ]
 
 const shavingz = [
