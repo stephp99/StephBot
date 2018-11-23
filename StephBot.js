@@ -90,7 +90,7 @@ client.on ("message", (message) => {
 	mention = message.mentions.users.first();
 	
 	for (x=0; x < profanities.length; x++) {
-		if (message.content.toUpperCase().includes == profanities[x].toUpperCase()) {
+		if (message.content.toUpperCase() == profanities[x].toUpperCase()) {
 			message.channel.send("LANGUAGE <:Soap:515638223704162346>");
 			message.delete();
 			return;
