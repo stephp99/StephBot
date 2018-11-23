@@ -1,0 +1,13 @@
+{
+  "name": "StephBot",
+  "version": "1.0.0",
+  "description": "My own Discord bot",
+  "main": "bot.js",
+  "author": "Steph Da Potato",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "discord.js": "^11.4.2",
+    "profanities": "^2.8.0",
+    "winston": "^3.1.0"
+  }
+}
