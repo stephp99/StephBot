@@ -91,7 +91,7 @@ client.on ("message", (message) => {
 	
 	for (x=0; x < profanities.length; x++) {
 		if (message.content.toUpperCase() == profanities[x].toUpperCase()) {
-			message.channel.send("LANGUAGE \n <:Soap:515638223704162346>");
+			message.channel.send("LANGUAGE \n<:Soap:515638223704162346>");
 			message.delete();
 			return;
 		}
