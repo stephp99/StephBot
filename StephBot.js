@@ -246,6 +246,7 @@ client.on ("message", (message) => {
             	.then((collected) => {
                 	if (collected.first().content == 'yes') {
                     		message.channel.send(`${challenged} has accepted the challenge!`);
+				message.channel.send(duel());
 				//message.channel.send('${challenged} would you like to use a sword, spell, or heal?');
 						
                		}
@@ -258,6 +259,20 @@ client.on ("message", (message) => {
             	});
         });       
 }
+	function duel() {
+		message.channel.send('${challenged} would you like to use a sword, spell, or heal?')
+		.then(() => {
+		message.channel.awaitMessages(response => response.content == 'sword' && response.author.id == fighter2 || response.content == 'spell' && response.author.id == fighter2 || response.content == 'heal' && response.author.id == fighter2, {
+			max: 1,
+			time: 60000,
+			errors: ['time'],
+		})
+		.then((collected) => {
+			if (collected.first().content == 'sword') {
+				message.channel.send();
+			}
+		}
+	}
 });
 
 client.login (token);
