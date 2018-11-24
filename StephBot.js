@@ -104,17 +104,28 @@ client.on ("message", (message) => {
 	
 	mention = message.mentions.users.first();
 	msg = message.content.toLowerCase();
-	for (x=0; x < profanitiez.length; x++) {
-		if (msg.includes(profanitiez[x])) {
-			message.channel.send("LANGUAGE <:Soap:515638223704162346>");
-			message.delete();
-			return;
+	//for (x=0; x < profanitiez.length; x++) {
+		
+  	var words = message.content.toLowerCase().trim().match(/\w+|\s+|[^\s\w]+/g);
+  	var containsBadWord = words.some(word => {
+    		return profanitiez.includes(word);
+  	});
+  	if (containsBadWord) {
+    		message.delete(1);
+    		message.channel.send("LANGUAGE <:Soap:515638223704162346>");
+  	}
+
+		//if (msg.includes(profanitiez[x])) {
+		//	message.channel.send("LANGUAGE <:Soap:515638223704162346>");
+		//	message.delete();
+		//	return;
+		
 		//if (message.content.toUpperCase() == profanities[x].toUpperCase()) {
 		//	message.channel.send("LANGUAGE <:Soap:515638223704162346>");
 		//	message.delete();
 		//	return;
-		}
-	}
+		//}
+	//}
 	
 	if(message.content.includes("hug")) {
 		if (message.isMentioned(client.user)) {
