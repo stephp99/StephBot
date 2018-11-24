@@ -271,7 +271,7 @@ client.on ("message", (message) => {
 			if (collected.first().content == 'sword') {
 				message.author.send("Hi!");
 			}
-		}
+		});
 	}
 	if (message.content.startsWith (prefix + "pm")) {
 		if (mention == null) {
