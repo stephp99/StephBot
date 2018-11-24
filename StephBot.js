@@ -246,9 +246,11 @@ client.on ("message", (message) => {
             	.then((collected) => {
                 	if (collected.first().content == 'yes') {
                     		message.channel.send(`${challenged} has accepted the challenge!`);
+				//message.channel.send('${challenged} would you like to use a sword, spell, or heal?');
+						
                		}
                 	else if(collected.first().content == 'no') {
-                    		message.channel.send(`nope`);
+                    		message.channel.send(`${challenged} has rejected you!`);
                 	}
             	})
             	.catch(() => {
