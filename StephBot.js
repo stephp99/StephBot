@@ -88,12 +88,16 @@ client.on ('guildMemberAdd', (member) => {
 client.on ("message", (message) => {
 	
 	mention = message.mentions.users.first();
-	
+	msg = message.content.toLowerCase();
 	for (x=0; x < profanities.length; x++) {
-		if (message.content.toUpperCase() == profanities[x].toUpperCase()) {
+		if (msg.includes(profanities[x].toLowerCase())) {
 			message.channel.send("LANGUAGE <:Soap:515638223704162346>");
 			message.delete();
 			return;
+		//if (message.content.toUpperCase() == profanities[x].toUpperCase()) {
+		//	message.channel.send("LANGUAGE <:Soap:515638223704162346>");
+		//	message.delete();
+		//	return;
 		}
 	}
 	
