@@ -89,7 +89,7 @@ const profanitiez = [
 'fuck',
 'asshole',
 'damn',
-'goddamn'
+'goddamn',
 'motherfucker',
 'nigger',
 'nigga',
