@@ -269,10 +269,18 @@ client.on ("message", (message) => {
 		})
 		.then((collected) => {
 			if (collected.first().content == 'sword') {
-				message.channel.send();
+				message.author.send("Hi!");
 			}
 		}
 	}
+	if (message.content.startsWith (prefix + "pm")) {
+		if (mention == null) {
+			message.channel.send ("Please specify who you'd like to message!");
+		}else{
+			message.mention.send (mention + " has been messaged!");
+		}
+	}
+	
 });
 
 client.login (token);
