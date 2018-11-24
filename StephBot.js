@@ -217,7 +217,7 @@ client.on ("message", (message) => {
 		}
 	}
 	
-	if(message.content.startsWith (prefix + 'duel') {
+	if(message.content.startsWith (prefix + 'duel')) {
     	//checks if the username to fight is in the message
     	let author1 = message.author.username;
     	let user = message.mentions.users.first();
