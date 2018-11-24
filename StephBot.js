@@ -1,5 +1,4 @@
 const discord = require ('discord.js');
-const profanities = require('profanities');
 var client = new discord.Client();
 
 const token = "NTE1MzQ4MzcxMzg1NjE0MzM2.DtkVmg.ldTxTGpBdTfqSp99IqyTgMGNuqw";
@@ -80,6 +79,22 @@ const hugz = [
 'I donut understand this public display of affection',
 ]
 
+const profanitiez = [
+'shit',
+'bitch',
+'ass',
+'cunt',
+'cock',
+'dick',
+'fuck',
+'asshole',
+'damn',
+'goddamn'
+'motherfucker',
+'nigger',
+'nigga',
+]
+
 client.on ('guildMemberAdd', (member) => {
 	const joinchannel = member.guild.channels.find('name', 'testing-grounds');
 	joinchannel.send('DONUT BE ALARMED WE ARE EXTREMELY WEIRD AND SLIGHTLY INSANE!');
@@ -89,8 +104,8 @@ client.on ("message", (message) => {
 	
 	mention = message.mentions.users.first();
 	msg = message.content.toLowerCase();
-	for (x=0; x < profanities.length; x++) {
-		if (msg.includes(profanities[x].toLowerCase())) {
+	for (x=0; x < profanitiez.length; x++) {
+		if (msg.includes(profanitiez[x].toLowerCase())) {
 			message.channel.send("LANGUAGE <:Soap:515638223704162346>");
 			message.delete();
 			return;
