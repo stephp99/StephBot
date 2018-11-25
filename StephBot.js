@@ -304,10 +304,10 @@ client.on ("message", (message) => {
 						currentPlayer = fighter2
 						duel(fighter1health, fighter2health, currentPlayer);
 					}
+				}
 			}
-		})
-	});
-}
+		});
+	}
 	
 });
 
