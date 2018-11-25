@@ -271,8 +271,12 @@ client.on ("message", (message) => {
 			if (collected.first().content == 'sword') {
 				message.author.send("Hi!");
 			}
+		})
+		.catch(() => {
+			message.channel.send("You took too long. Your turn has been skipped!");
 		});
-	}
+	});
+}
 	if (message.content.startsWith (prefix + "pm")) {
 		if (mention == null) {
 			message.channel.send ("Please specify who you'd like to message!");
