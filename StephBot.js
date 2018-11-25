@@ -104,7 +104,13 @@ client.on ("message", (message) => {
 	
 	mention = message.mentions.users.first();
 	msg = message.content.toLowerCase();
-		
+	var dice = {
+  		sides: 6,
+  		roll: function () {
+    			var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    			return randomNumber;
+ 		}
+	}	
   	var words = message.content.toLowerCase().trim().match(/\w+|\s+|[^\s\w]+/g);
   	var containsBadWord = words.some(word => {
     		return profanitiez.includes(word);
@@ -245,10 +251,9 @@ client.on ("message", (message) => {
             	})
             	.then((collected) => {
                 	if (collected.first().content == 'yes') {
+				var currentPlayer = message.author.id;
                     		message.channel.send(`${challenged} has accepted the challenge!`);
-				message.channel.send(duel());
-				//message.channel.send('${challenged} would you like to use a sword, spell, or heal?');
-						
+				duel(100, 100, currentPlayer);
                		}
                 	else if(collected.first().content == 'no') {
                     		message.channel.send(`${challenged} has rejected you!`);
@@ -257,34 +262,52 @@ client.on ("message", (message) => {
             	.catch(() => {
                 	message.channel.send(`No response. Fight has been cancelled.`);
             	});
-        });       
+        });      
 }
-	function duel() {
-		message.channel.send('${challenged} would you like to use a sword, spell, or heal?')
+	//fighter2 goes first
+	function duel(fighter1health, fighter2health, currentPlayer) {
+		if (fighter1health == 0) {
+			message.channel.send("Game over!" + fighter2 " wins!")
+			return;
+		}else if(fighter2health == 0) {
+			message.channel.send("Game over!" + fighter1 " wins!")
+			return;
+		}
+		message.channel.send(currentPlayer ', would you like to use a sword, spell, or heal?')
 		.then(() => {
-		message.channel.awaitMessages(response => response.content == 'sword' && response.author.id == fighter2 || response.content == 'spell' && response.author.id == fighter2 || response.content == 'heal' && response.author.id == fighter2, {
+		message.channel.awaitMessages(response => response.content == 'sword' && response.author.id == currentPlayer || response.content == 'spell' && response.author.id == currentPlayer || response.content == 'heal' && response.author.id == currentPlayer, {
 			max: 1,
-			time: 60000,
-			errors: ['time'],
 		})
 		.then((collected) => {
 			if (collected.first().content == 'sword') {
-				message.author.send("Hi!");
+				var result = dice.roll();
+				message.channel.send("You rolled a " + result);
+				if (result >= 4) {
+					message.channel.send ("You dealt 10 damage!");
+					if (currentPlayer = fighter1) {
+						fighter1health -= 10;
+						currentPlayer = fighter1
+						duel(fighter1health, fighter2health, currentPlayer);
+					}else{
+						fighter2health -= 10;
+						currentPlayer = fighter2
+						duel(fighter1health, fighter2health, currentPlayer);
+					}
+				}else{
+					message.channel.send ("Attack unsuccessful. You received 5 damage!");
+					if (currentPlayer = fighter1) {
+						fighter1health -= 5
+						currentPlayer = fighter1
+						duel(fighter1health, fighter2health, currentPlayer);
+					}else{
+						fighter2health -= 5;
+						currentPlayer = fighter2
+						duel(fighter1health, fighter2health, currentPlayer);
+					}
 			}
 		})
-		.catch(() => {
-			message.channel.send("You took too long. Your turn has been skipped!");
-		});
 	});
 }
-	if (message.content.startsWith (prefix + "pm")) {
-		if (mention == null) {
-			message.channel.send ("Please specify who you'd like to message!");
-		}else{
-			message.channel.send (mention + " has been messaged!");
-			message.author.send ("Hi!");
-		}
-	}
 	
 });
 
