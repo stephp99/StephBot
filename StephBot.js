@@ -267,13 +267,13 @@ client.on ("message", (message) => {
 	//fighter2 goes first
 	function duel(fighter1health, fighter2health, currentPlayer) {
 		if (fighter1health == 0) {
-			message.channel.send("Game over!" + fighter2 " wins!")
+			message.channel.send("Game over!" + fighter2 + " wins!")
 			return;
 		}else if(fighter2health == 0) {
-			message.channel.send("Game over!" + fighter1 " wins!")
+			message.channel.send("Game over!" + fighter1 + " wins!")
 			return;
 		}
-		message.channel.send(currentPlayer ', would you like to use a sword, spell, or heal?')
+		message.channel.send(currentPlayer + ', would you like to use a sword, spell, or heal?')
 		.then(() => {
 		message.channel.awaitMessages(response => response.content == 'sword' && response.author.id == currentPlayer || response.content == 'spell' && response.author.id == currentPlayer || response.content == 'heal' && response.author.id == currentPlayer, {
 			max: 1,
