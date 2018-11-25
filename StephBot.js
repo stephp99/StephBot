@@ -281,7 +281,8 @@ client.on ("message", (message) => {
 		if (mention == null) {
 			message.channel.send ("Please specify who you'd like to message!");
 		}else{
-			message.mention.send (mention + " has been messaged!");
+			message.channel.send (mention + " has been messaged!");
+			message.author.send ("Hi!");
 		}
 	}
 	
