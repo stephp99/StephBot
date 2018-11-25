@@ -307,7 +307,7 @@ client.on ("message", (message) => {
 				}
 			}
 		});
-	}
+	})
 	
 });
 
