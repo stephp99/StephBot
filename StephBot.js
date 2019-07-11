@@ -237,6 +237,11 @@ client.on ("message", (message) => {
 			file: geraldz[Math.floor(Math.random() * geraldz.length)]
 			});
 	}
+	if (message.content.includes("gerald")) {
+		if (user.id != client.user) {
+			message.channel.send ("<:gerald:592209457682055178>");
+		}
+	}
 	
 	if(message.content.startsWith (prefix + 'duel')) {
     	//checks if the username to fight is in the message
