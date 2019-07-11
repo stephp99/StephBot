@@ -140,7 +140,7 @@ client.on ("message", (message) => {
 	if (message.content.startsWith ("👀")) {
 		message.channel.send (":eyes:");
 	}
-	if (message.content.startsWith ("<:blurry_eyes:585284438942941204>")) {
+	if (message.content.startsWith (":blurry_eyes:")) {
 		if (user.id != client.user) {
 			message.channel.send ("<:blurry_eyes:585284438942941204>");
 		}
