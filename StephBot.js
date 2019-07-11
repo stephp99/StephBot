@@ -140,11 +140,6 @@ client.on ("message", (message) => {
 	if (message.content.startsWith ("👀")) {
 		message.channel.send (":eyes:");
 	}
-	if (message.content.startsWith (":blurry_eyes:")) {
-		if (user.id != client.user) {
-			message.channel.send ("<:blurry_eyes:585284438942941204>");
-		}
-	}
 	
 	if (message.content.startsWith (prefix + "oof")) {
 		message.channel.send (". . . . . . .     . . . . . . .     . . . . . . . \n.           .     .           .     . \n.           .     .           .     . . . . . \n. . . . . . .     . . . . . . .     .");
@@ -236,11 +231,6 @@ client.on ("message", (message) => {
 		message.channel.send ("#Gerald2020", {
 			file: geraldz[Math.floor(Math.random() * geraldz.length)]
 			});
-	}
-	if (message.content.includes("gerald")) {
-		if (user.id != client.user) {
-			message.channel.send ("<:gerald:592209457682055178>");
-		}
 	}
 	
 	if(message.content.startsWith (prefix + 'duel')) {
