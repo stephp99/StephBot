@@ -287,7 +287,7 @@ client.on ("message", (message) => {
 		.then(() => {
 		message.channel.awaitMessages(response => response.content == 'sword' && response.author.id == currentPlayer || response.content == 'spell' && response.author.id == currentPlayer || response.content == 'heal' && response.author.id == currentPlayer) {
 			max: 1,
-		})
+		}})
 		.then((collected) => {
 			if (collected.first().content == 'sword') {
 				var result = dice.roll();
