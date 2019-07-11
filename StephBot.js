@@ -92,8 +92,12 @@ const profanitiez = [
 'nigga',
 ]
 
-const gerald = [
-	
+const geraldz = [
+'./Images/gerald1.gif',
+'./Images/gerald2.gif',
+'./Images/gerald3.gif',
+'./Images/gerald4.gif',
+]
 
 client.on ('guildMemberAdd', (member) => {
 	const joinchannel = member.guild.channels.find('name', 'testing-grounds');
@@ -126,7 +130,7 @@ client.on ("message", (message) => {
 	}}
 	
 	if (message.content.startsWith (prefix + "help")) {
-		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso");
+		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald");
 	}
 	
 	if (message.content.startsWith (prefix + "hello")) {
@@ -135,6 +139,9 @@ client.on ("message", (message) => {
 	
 	if (message.content.startsWith ("👀")) {
 		message.channel.send (":eyes:");
+	}
+	if (message.content.startsWith ("<:blurry_eyes:585284438942941204>")) {
+		message.channel.send ("<:blurry_eyes:585284438942941204>");
 	}
 	
 	if (message.content.startsWith (prefix + "oof")) {
@@ -223,10 +230,13 @@ client.on ("message", (message) => {
 		}
 	}
 	
-	if (message.content.includes("gerald")) {
+	if (message.content.startsWith (prefix + "gerald")) {
 		message.channel.send ("#Gerald2020", {
-			file: gerald[Math.floor(Math.random() * gerald.length)]
+			file: geraldz[Math.floor(Math.random() * geraldz.length)]
 			});
+	}
+	if (message.content.includes("gerald")) {
+		message.channel.send ("<:gerald:592209457682055178>");
 	}
 	
 	if(message.content.startsWith (prefix + 'duel')) {
