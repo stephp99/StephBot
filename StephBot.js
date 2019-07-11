@@ -230,14 +230,14 @@ client.on ("message", (message) => {
 		}
 	}
 	
-	if (message.content.startsWith (prefix + "gerald")) {
-		message.channel.send ("#Gerald2020", {
-			file: geraldz[Math.floor(Math.random() * geraldz.length)]
-			});
-	}
-	if (message.content.includes("gerald")) {
-		message.channel.send ("<:gerald:592209457682055178>");
-	}
+	#if (message.content.startsWith (prefix + "gerald")) {
+	#	message.channel.send ("#Gerald2020", {
+	#		file: geraldz[Math.floor(Math.random() * geraldz.length)]
+	#		});
+	#}
+	#if (message.content.includes("gerald")) {
+	#	message.channel.send ("<:gerald:592209457682055178>");
+	#}
 	
 	if(message.content.startsWith (prefix + 'duel')) {
     	//checks if the username to fight is in the message
