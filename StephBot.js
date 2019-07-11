@@ -317,7 +317,7 @@ client.on ("message", (message) => {
 				}
 			}
 		});
-	})
+	}
 
 });
 
