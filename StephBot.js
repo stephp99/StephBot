@@ -285,7 +285,7 @@ client.on ("message", (message) => {
 		}
 		message.channel.send(currentPlayer + ', would you like to use a sword, spell, or heal?')
 		.then(() => {
-		message.channel.awaitMessages(response => response.content == 'sword' && response.author.id == currentPlayer || response.content == 'spell' && response.author.id == currentPlayer || response.content == 'heal' && response.author.id == currentPlayer) {
+		message.channel.awaitMessages(response => response.content == 'sword' && response.author.id == currentPlayer || response.content == 'spell' && response.author.id == currentPlayer || response.content == 'heal' && response.author.id == currentPlayer, {
 			max: 1,
 		}})
 		.then((collected) => {
