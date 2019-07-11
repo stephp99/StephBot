@@ -38,7 +38,6 @@ const shavingz = [
 const yeetz = [
 './Images/yeet.gif',
 './Images/yeet1.gif',
-'./Images/yeet2.gif',
 ]
 
 const ripz = [
@@ -93,6 +92,9 @@ const profanitiez = [
 'nigga',
 ]
 
+const gerald = [
+	
+
 client.on ('guildMemberAdd', (member) => {
 	const joinchannel = member.guild.channels.find('name', 'testing-grounds');
 	joinchannel.send('DONUT BE ALARMED WE ARE EXTREMELY WEIRD AND SLIGHTLY INSANE!');
@@ -115,7 +117,7 @@ client.on ("message", (message) => {
   	});
   	if (containsBadWord) {
     		message.delete(1);
-    		message.channel.send("LANGUAGE <:Soap:515638223704162346>");
+    		message.channel.send("LANGUAGE <:Soap:436348198093586442>");
   	}
 	
 	if(message.content.includes("hug")) {
@@ -219,6 +221,12 @@ client.on ("message", (message) => {
 				file: arsoz[Math.floor(Math.random() * arsoz.length)]
 			});
 		}
+	}
+	
+	if (message.content.includes("gerald")) {
+		message.channel.send ("#Gerald2020", {
+			file: gerald[Math.floor(Math.random() * gerald.length)]
+			});
 	}
 	
 	if(message.content.startsWith (prefix + 'duel')) {
