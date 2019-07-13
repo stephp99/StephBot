@@ -99,6 +99,12 @@ const geraldz = [
 './Images/gerald4.gif',
 ]
 
+const moodz = [
+'./Images/mood1.gif',
+'./Images/mood2.gif',
+'./Images/mood3.gif',
+]
+	
 client.on ('guildMemberAdd', (member) => {
 	const joinchannel = member.guild.channels.find('name', 'testing-grounds');
 	joinchannel.send('DONUT BE ALARMED WE ARE EXTREMELY WEIRD AND SLIGHTLY INSANE!');
@@ -231,6 +237,12 @@ client.on ("message", (message) => {
 		message.channel.send ("#Gerald2020", {
 			file: geraldz[Math.floor(Math.random() * geraldz.length)]
 			});
+	}
+	
+	if (message.content.startsWith (prefix + "mood")) {
+		message.channel.send ("That's a big moof", {
+			file: moodz[Math.floor(Math.random() * moodz.length)]
+		});	
 	}
 	
 	if(message.content.startsWith (prefix + 'duel')) {
