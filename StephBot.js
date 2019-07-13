@@ -136,7 +136,7 @@ client.on ("message", (message) => {
 	}}
 	
 	if (message.content.startsWith (prefix + "help")) {
-		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald");
+		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood");
 	}
 	
 	if (message.content.startsWith (prefix + "hello")) {
