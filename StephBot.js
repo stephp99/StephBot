@@ -147,6 +147,10 @@ client.on ("message", (message) => {
 		message.channel.send (":eyes:");
 	}
 	
+	if (message.content.startsWith ("murder")) {
+		message.channel.send ("Did someone say murder? :knife:");
+	}
+	
 	if (message.content.startsWith (prefix + "oof")) {
 		message.channel.send (". . . . . . .     . . . . . . .     . . . . . . . \n.           .     .           .     . \n.           .     .           .     . . . . . \n. . . . . . .     . . . . . . .     .");
 	}
