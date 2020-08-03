@@ -40,6 +40,18 @@ const yeetz = [
 './Images/yeet1.gif',
 ]
 
+const pokez = [
+'./Images/catpoke.gif',
+'./Images/chickenpoke.gif',
+'./Images/diepoke.gif',
+'./Images/darlapoke.gif',
+'./Images/disinterestedpoke.gif',
+'./Images/simpsonpoke.gif',
+'./Images/sleeppoke.gif',
+'./Images/terminatorpoke.gif',
+'./Images/tiredpoke.gif',
+]
+
 const ripz = [
 './Images/rip.gif',
 './Images/rip1.gif',
@@ -209,6 +221,18 @@ client.on ("message", (message) => {
 		}else{
 			message.channel.send (mention + ", rest in pieces :)", {
 				file: ripz[Math.floor(Math.random() * ripz.length)]
+			});
+		}
+	}
+	
+	if (message.content.startsWith (prefix + "poke")) {
+		if (mention == null) {
+			message.channel.send ("Attack of the phalanges!", {
+				file: pokez[Math.floor(Math.random() * pokez.length)]
+			});
+		}else{
+			message.channel.send (mention + ", are you annoyed yet?", {
+				file: pokez[Math.floor(Math.random() * pokez.length)]
 			});
 		}
 	}
