@@ -143,6 +143,17 @@ const hugsz = [
 './Images/antihug5.gif',
 ]
 
+const punchez = [
+'./Images/punch1.gif',
+'./Images/punch2.gif',
+'./Images/punch3.gif',
+'./Images/punch4.gif',
+'./Images/punch5.gif',
+'./Images/punch6.gif',
+'./Images/punch7.gif',
+'./Images/punch8.gif',
+]
+
 const profanitiez = [
 'shit',
 'sh!t',
@@ -286,6 +297,18 @@ client.on ("message", (message) => {
 		}else{
 			message.channel.send (mention + ", rest in pieces :)", {
 				file: ripz[Math.floor(Math.random() * ripz.length)]
+			});
+		}
+	}
+	
+	if (message.content.startsWith (prefix + "punch")) {
+		if (mention == null) {
+			message.channel.send ("*The air punches back.*", {
+				file: punchez[Math.floor(Math.random() * punchez.length)]
+			});
+		}else{
+			message.channel.send (mention + ", did we hurt your stupid feelings? :P", {
+				file: punchez[Math.floor(Math.random() * punchez.length)]
 			});
 		}
 	}
