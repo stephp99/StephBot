@@ -200,12 +200,6 @@ client.on ("message", (message) => {
     		message.channel.send("LANGUAGE <:Soap:436348198093586442>");
   	}
 	
-	if(message.content.includes("hug")) {
-		if (message.isMentioned(client.user)) {
-			message.reply (hugz[Math.floor(Math.random() * hugz.length)]);
-	}}
-	
-	
 	if (message.content.startsWith (prefix + "hug")) {
 		if (mention == null) {
 			message.channel.send ("The void doesn't like to be hugged.");
