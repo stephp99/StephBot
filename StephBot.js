@@ -633,7 +633,7 @@ client.on ("message", (message) => {
 				}
 			}
 		});
-	}
+	})
 
 });
 
