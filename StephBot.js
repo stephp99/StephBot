@@ -83,6 +83,18 @@ const slapz = [
 './Images/slap11.gif',
 ]
 
+const cuddlez = [
+'./Images/cuddle1.gif',
+'./Images/cuddle2.gif',
+'./Images/cuddle3.gif',
+'./Images/cuddle4.gif',
+'./Images/cuddle5.gif',
+'./Images/cuddle6.gif',
+'./Images/cuddle7.gif',
+'./Images/cuddle8.gif',
+'./Images/cuddle9.gif',
+'./Images/cuddle10.gif',
+]
 
 const kissez = [
 './Images/kiss1.gif',
@@ -345,6 +357,18 @@ client.on ("message", (message) => {
 		}else{
 			message.channel.send (mention + ", did we hurt your stupid feelings? :P", {
 				file: punchez[Math.floor(Math.random() * punchez.length)]
+			});
+		}
+	}
+	
+	if (message.content.startsWith (prefix + "cuddle")) {
+		if (mention == null) {
+			message.channel.send ("*The void will remember this.*", {
+				file: cuddlez[Math.floor(Math.random() * cuddlez.length)]
+			});
+		}else{
+			message.channel.send (mention + ", I hope you suffocate. XD", {
+				file: cuddlez[Math.floor(Math.random() * cuddlez.length)]
 			});
 		}
 	}
