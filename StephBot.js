@@ -120,6 +120,29 @@ const hugz = [
 'I donut understand this public display of affection',
 ]
 
+const hugsz = [
+'./Images/hug1.gif',
+'./Images/hug2.gif',
+'./Images/hug3.gif',
+'./Images/hug4.gif',
+'./Images/hug5.gif',
+'./Images/hug6.gif',
+'./Images/hug7.gif',
+'./Images/hug8.gif',
+'./Images/hug9.gif',
+'./Images/hug10.gif',
+'./Images/hug11.gif',
+'./Images/hug12.gif',
+'./Images/hug13.gif',
+'./Images/hug14.gif',
+'./Images/hug15.gif',
+'./Images/antihug1.gif',
+'./Images/antihug2.gif',
+'./Images/antihug3.gif',
+'./Images/antihug4.gif',
+'./Images/antihug5.gif',
+]
+
 const profanitiez = [
 'shit',
 'sh!t',
@@ -182,8 +205,21 @@ client.on ("message", (message) => {
 			message.reply (hugz[Math.floor(Math.random() * hugz.length)]);
 	}}
 	
+	
+	if (message.content.startsWith (prefix + "hug")) {
+		if (mention == null) {
+			message.channel.send ("The void doesn't like to be hugged.");
+		}else if{ (message.isMentioned(client.user)) {
+			message.reply (hugz[Math.floor(Math.random() * hugz.length)]);
+		}else{
+			message.channel.send (mention + ", *cough* *gag* *hack*", {
+				file: hugsz[Math.floor(Math.random() * hugsz.length)]
+			});
+		}
+	}
+	
 	if (message.content.startsWith (prefix + "help")) {
-		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke");
+		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck");
 	}
 	
 	if (message.content.startsWith (prefix + "hello")) {
