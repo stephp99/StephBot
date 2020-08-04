@@ -104,6 +104,12 @@ const kissez = [
 './Images/kiss5.gif',
 './Images/kiss6.gif',
 './Images/kiss7.gif',
+'./Images/kiss8.gif',
+'./Images/kiss9.gif',
+'./Images/kiss10.gif',
+'./Images/kiss11.gif',
+'./Images/kiss12.gif',
+'./Images/kiss13.gif',
 ]
 
 const patz = [
@@ -114,6 +120,20 @@ const patz = [
 './Images/pat5.gif',
 './Images/pat6.gif',
 './Images/pat7.gif',
+]
+
+const cryz = [
+'./Images/cry1.gif',
+'./Images/cry2.gif',
+'./Images/cry3.gif',
+'./Images/cry4.gif',
+'./Images/cry5.gif',
+'./Images/cry6.gif',
+'./Images/cry7.gif',
+'./Images/cry8.gif',
+'./Images/cry9.gif',
+'./Images/cry10.gif',
+'./Images/cry11.gif',
 ]
 
 const explodez = [
@@ -374,6 +394,12 @@ client.on ("message", (message) => {
 				file: punchez[Math.floor(Math.random() * punchez.length)]
 			});
 		}
+	}
+	
+	if (message.content.startsWith (prefix + "cry")) {
+		message.channel.send ("Oh boohoo", {
+			file: cryz[Math.floor(Math.random() * cryz.length)]
+		});	
 	}
 	
 	if (message.content.startsWith (prefix + "kick")) {
