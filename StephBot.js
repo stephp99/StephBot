@@ -406,9 +406,9 @@ client.on ("message", (message) => {
 	
 	if (message.content.startsWith (prefix + "f")) {
 		if (mention == null) {
-			message.reply (" has paid their respects." + heartz[Math.floor(Math.random() * heartz.length)]);
+			message.reply (" you've paid your respects. " + heartz[Math.floor(Math.random() * heartz.length)]);
 		}else{
-			message.reply (" has paid their respects for " + mention + ".");
+			message.reply (" you've paid your respects for " + mention + ". " + heartz[Math.floor(Math.random() * heartz.length)]);
 		}
 	}
 	
