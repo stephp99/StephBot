@@ -68,6 +68,26 @@ const ripz = [
 './Images/rip4.gif',
 ]
 
+const kissez = [
+'./Images/kiss1.gif',
+'./Images/kiss2.gif',
+'./Images/kiss3.gif',
+'./Images/kiss4.gif',
+'./Images/kiss5.gif',
+'./Images/kiss6.gif',
+'./Images/kiss7.gif',
+]
+
+const patz = [
+'./Images/pat1.gif',
+'./Images/pat2.gif',
+'./Images/pat3.gif',
+'./Images/pat4.gif',
+'./Images/pat5.gif',
+'./Images/pat6.gif',
+'./Images/pat7.gif',
+]
+
 const explodez = [
 './Images/bomb.gif',
 './Images/bomb1.gif',
@@ -224,7 +244,7 @@ client.on ("message", (message) => {
 	}
 	
 	if (message.content.startsWith (prefix + "help")) {
-		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck \nhug");
+		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck \nhug \npunch");
 	}
 	
 	if (message.content.startsWith (prefix + "hello")) {
@@ -357,6 +377,31 @@ client.on ("message", (message) => {
 		}else{
 			message.channel.send (mention + " has caught fire!", {
 				file: arsoz[Math.floor(Math.random() * arsoz.length)]
+			});
+		}
+	}
+	
+	
+	if (message.content.startsWith (prefix + "kiss")) {
+		if (mention == null) {
+			message.channel.send ("Are you so thirsty you feel the need to get it on with the void?", {
+				file: kissez[Math.floor(Math.random() * kissez.length)]
+			});
+		}else{
+			message.channel.send (mention + ", I apologize for the inconvenience.", {
+				file: kissez[Math.floor(Math.random() * kissez.length)]
+			});
+		}
+	}
+	
+	if (message.content.startsWith (prefix + "pat")) {
+		if (mention == null) {
+			message.channel.send ("The void is not amused.", {
+				file: patz[Math.floor(Math.random() * patz.length)]
+			});
+		}else{
+			message.channel.send (mention + ", pat pat I guess.", {
+				file: patz[Math.floor(Math.random() * patz.length)]
 			});
 		}
 	}
