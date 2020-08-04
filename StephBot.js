@@ -209,7 +209,7 @@ client.on ("message", (message) => {
 	if (message.content.startsWith (prefix + "hug")) {
 		if (mention == null) {
 			message.channel.send ("The void doesn't like to be hugged.");
-		}else if{ (message.isMentioned(client.user)) {
+		}else if (message.isMentioned(client.user)) {
 			message.reply (hugz[Math.floor(Math.random() * hugz.length)]);
 		}else{
 			message.channel.send (mention + ", *cough* *gag* *hack*", {
