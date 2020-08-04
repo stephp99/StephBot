@@ -233,6 +233,21 @@ const moodz = [
 './Images/mood2.gif',
 './Images/mood3.gif',
 ]
+
+const kickz = [
+'./Images/kick1.gif',
+'./Images/kick2.gif',
+'./Images/kick3.gif',
+'./Images/kick4.gif',
+'./Images/kick5.gif',
+'./Images/kick6.gif',
+'./Images/kick7.gif',
+'./Images/kick8.gif',
+'./Images/kick9.gif',
+'./Images/kick10.gif',
+'./Images/kick11.gif',
+'./Images/kick12.gif',
+]
 	
 client.on ('guildMemberAdd', (member) => {
 	const joinchannel = member.guild.channels.find('name', 'testing-grounds');
@@ -272,7 +287,7 @@ client.on ("message", (message) => {
 	}
 	
 	if (message.content.startsWith (prefix + "help")) {
-		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck \nhug \npunch");
+		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck \nhug \npunch \nslap \ncuddle \nkiss \npat \nkick");
 	}
 	
 	if (message.content.startsWith (prefix + "hello")) {
@@ -357,6 +372,16 @@ client.on ("message", (message) => {
 		}else{
 			message.channel.send (mention + ", did we hurt your stupid feelings? :P", {
 				file: punchez[Math.floor(Math.random() * punchez.length)]
+			});
+		}
+	}
+	
+	if (message.content.startsWith (prefix + "kick")) {
+		if (mention == null) {
+			message.channel.send ("You slip on a banana peel for you tried to mess with the void.");
+		}else{
+			message.channel.send (mention + ", FIGHT FIGHT FIGHT", {
+				file: kickz[Math.floor(Math.random() * kickz.length)]
 			});
 		}
 	}
