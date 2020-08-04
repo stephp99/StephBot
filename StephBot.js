@@ -23,6 +23,11 @@ const sexyeggz = [
 './Images/legabs.png',
 './Images/jasonabs.jpg',
 './Images/nickabs.jpg',
+'./Images/gavinabs.png',
+'./Images/victorabs.png',
+'./Images/victorabs2.png',
+'./Images/sexyfisheggs.png',
+'./Images/maidsamasexyeggs.gif',
 ]
 
 const shavingz = [
@@ -38,6 +43,7 @@ const shavingz = [
 const yeetz = [
 './Images/yeet.gif',
 './Images/yeet1.gif',
+'./Images/yeet2.gif',
 './Images/elmoyeet.gif',
 './Images/umbrellayeet.gif',
 ]
@@ -70,6 +76,7 @@ const explodez = [
 './Images/bomb4.gif',
 './Images/bomb5.gif',
 './Images/bomb6.gif',
+'./Images/bomb7.gif',
 ]
 
 const arsoz = [
@@ -82,6 +89,29 @@ const arsoz = [
 './Images/fire7.gif',
 ]
 
+const vibez = [
+'./Images/vibecheck1.gif',
+'./Images/vibecheck2.gif',
+'./Images/vibecheck3.gif',
+'./Images/vibecheck4.gif',
+'./Images/vibecheck5.gif',
+'./Images/vibecheck6.gif',
+'./Images/vibecheck7.gif',
+'./Images/vibecheck8.gif',
+'./Images/vibecheck9.gif',
+'./Images/vibecheck10.gif',
+'./Images/vibecheck11.gif',
+'./Images/vibecheck12.gif',
+'./Images/vibecheck13.gif',
+'./Images/vibecheck14.gif',
+'./Images/vibecheck15.gif',
+'./Images/vibecheck16.gif',
+'./Images/vibecheck17.gif',
+'./Images/vibecheck18.gif',
+'./Images/vibecheck19.gif',
+'./Images/vibecheck20.gif',
+]
+
 const hugz = [
 'this is a vile gesture, how could you?',
 "we can't be friends ;-;",
@@ -92,13 +122,16 @@ const hugz = [
 
 const profanitiez = [
 'shit',
+'sh!t',
 'bitch',
 'ass',
+'a$$',
 'cunt',
 'cock',
 'dick',
 'fuck',
 'asshole',
+'a$$hole',
 'damn',
 'goddamn',
 'motherfucker',
@@ -235,6 +268,18 @@ client.on ("message", (message) => {
 		}else{
 			message.channel.send (mention + ", are you annoyed yet?", {
 				file: pokez[Math.floor(Math.random() * pokez.length)]
+			});
+		}
+	}
+	
+	if (message.content.startsWith (prefix + "vibecheck")) {
+		if (mention == null) {
+			message.channel.send ("A vibe check is in order.", {
+				file: vibez[Math.floor(Math.random() * vibez.length)]
+			});
+		}else{
+			message.channel.send (mention + ", your vibe is currently under investigation.", {
+				file: vibez[Math.floor(Math.random() * vibez.length)]
 			});
 		}
 	}
