@@ -222,6 +222,18 @@ const punchez = [
 './Images/punch8.gif',
 ]
 
+const heartz = [
+':heart:',
+':blue_heart:',
+':yellow_heart:',
+':purple_heart:',
+':black_heart:',
+':green_heart:',
+':brown_heart:',
+':orange_heart:',
+':white_heart:',
+]
+
 const profanitiez = [
 'shit',
 'sh!t',
@@ -307,7 +319,7 @@ client.on ("message", (message) => {
 	}
 	
 	if (message.content.startsWith (prefix + "help")) {
-		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck \nhug \npunch \nslap \ncuddle \nkiss \npat \nkick \ncry");
+		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck \nhug \npunch \nslap \ncuddle \nkiss \npat \nkick \ncry \nhowcool \nf");
 	}
 	
 	if (message.content.startsWith (prefix + "hello")) {
@@ -389,6 +401,14 @@ client.on ("message", (message) => {
 			message.reply (" is " + ( Math.floor(Math.random() * 100) + 1 ) + "% cool!");
 		}else{
 			message.channel.send (mention + " is " + ( Math.floor(Math.random() * 100) + 1 ) + "% cool!");
+		}
+	}
+	
+	if (message.content.startsWith (prefix + "f")) {
+		if (mention == null) {
+			message.reply (" has paid their respects." + heartz[Math.floor(Math.random() * heartz.length)]);
+		}else{
+			message.reply (" has paid their respects for " + mention + ".");
 		}
 	}
 	
