@@ -68,6 +68,22 @@ const ripz = [
 './Images/rip4.gif',
 ]
 
+
+const slapz = [
+'./Images/slap1.gif',
+'./Images/slap2.gif',
+'./Images/slap3.gif',
+'./Images/slap4.gif',
+'./Images/slap5.gif',
+'./Images/slap6.gif',
+'./Images/slap7.gif',
+'./Images/slap8.gif',
+'./Images/slap9.gif',
+'./Images/slap10.gif',
+'./Images/slap11.gif',
+]
+
+
 const kissez = [
 './Images/kiss1.gif',
 './Images/kiss2.gif',
@@ -329,6 +345,18 @@ client.on ("message", (message) => {
 		}else{
 			message.channel.send (mention + ", did we hurt your stupid feelings? :P", {
 				file: punchez[Math.floor(Math.random() * punchez.length)]
+			});
+		}
+	}
+	
+	if (message.content.startsWith (prefix + "slap")) {
+		if (mention == null) {
+			message.channel.send ("*The void finds your slap to be pitiful.*", {
+				file: slapz[Math.floor(Math.random() * slapz.length)]
+			});
+		}else{
+			message.channel.send (mention + ", I believe that was an improvement.", {
+				file: slapz[Math.floor(Math.random() * slapz.length)]
 			});
 		}
 	}
