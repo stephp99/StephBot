@@ -319,7 +319,7 @@ client.on ("message", (message) => {
 	}
 	
 	if (message.content.startsWith (prefix + "help")) {
-		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck \nhug \npunch \nslap \ncuddle \nkiss \npat \nkick \ncry \nhowcool \nf");
+		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck \nhug \npunch \nslap \ncuddle \nkiss \npat \nkick \ncry \nhowcool");
 	}
 	
 	if (message.content.startsWith (prefix + "hello")) {
@@ -330,7 +330,7 @@ client.on ("message", (message) => {
 		message.channel.send (":eyes:");
 	}
 	
-	if (message.content.includes ("murder")) {
+	if (message.content.startsWith ("murder")) {
 		message.channel.send ("Did someone say murder? :knife:");
 	}
 	
