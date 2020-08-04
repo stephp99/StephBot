@@ -330,7 +330,7 @@ client.on ("message", (message) => {
 		message.channel.send (":eyes:");
 	}
 	
-	if (message.content.startsWith ("murder")) {
+	if (message.content.includes ("murder")) {
 		message.channel.send ("Did someone say murder? :knife:");
 	}
 	
