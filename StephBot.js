@@ -219,7 +219,7 @@ client.on ("message", (message) => {
 	}
 	
 	if (message.content.startsWith (prefix + "help")) {
-		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck");
+		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck \nhug");
 	}
 	
 	if (message.content.startsWith (prefix + "hello")) {
