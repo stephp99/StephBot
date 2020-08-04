@@ -38,6 +38,8 @@ const shavingz = [
 const yeetz = [
 './Images/yeet.gif',
 './Images/yeet1.gif',
+'./Images/elmoyeet.gif',
+'./Images/umbrellayeet.gif',
 ]
 
 const pokez = [
@@ -148,7 +150,7 @@ client.on ("message", (message) => {
 	}}
 	
 	if (message.content.startsWith (prefix + "help")) {
-		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood");
+		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke");
 	}
 	
 	if (message.content.startsWith (prefix + "hello")) {
