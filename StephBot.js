@@ -384,6 +384,14 @@ client.on ("message", (message) => {
 		}
 	}
 	
+	if (message.content.startsWith (prefix + "howcool")) {
+		if (mention == null) {
+			message.reply (" is " + ( Math.floor(Math.random() * 100) + 1 ) + "% cool!");
+		}else{
+			message.channel.send (mention + " is " + ( Math.floor(Math.random() * 100) + 1 ) + "% cool!");
+		}
+	}
+	
 	if (message.content.startsWith (prefix + "punch")) {
 		if (mention == null) {
 			message.channel.send ("*The air punches back.*", {
