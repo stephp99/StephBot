@@ -319,7 +319,7 @@ client.on ("message", (message) => {
 	}
 	
 	if (message.content.startsWith (prefix + "help")) {
-		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck \nhug \npunch \nslap \ncuddle \nkiss \npat \nkick \ncry \nhowcool");
+		message.channel.send ("List of Commands ($): \nhello \noof \nsexyeggs \nvitoa \nshave \nyeet \nrip \nexplode \narso \ngerald \nmood \npoke \nvibecheck \nhug \npunch \nslap \ncuddle \nkiss \npat \nkick \ncry \nhowcool \nf");
 	}
 	
 	if (message.content.startsWith (prefix + "hello")) {
@@ -591,50 +591,50 @@ client.on ("message", (message) => {
         });      
 }
 	//fighter2 goes first
-	function duel(fighter1health, fighter2health, currentPlayer) {
-		if (fighter1health == 0) {
-			message.channel.send("Game over!" + fighter2 + " wins!");
-			return;
-		}else if(fighter2health == 0) {
-			message.channel.send("Game over!" + fighter1 + " wins!");
-			return;
-		}
-		message.channel.send(currentPlayer + ', would you like to use a sword, spell, or heal?')
-		.then(() => {
-		message.channel.awaitMessages(response => response.content == 'sword' && response.author.id == currentPlayer || response.content == 'spell' && response.author.id == currentPlayer || response.content == 'heal' && response.author.id == currentPlayer, {
-			max: 1,
-		})
-		.then((collected) => {
-			if (collected.first().content == 'sword') {
-				var result = dice.roll();
-				message.channel.send("You rolled a " + result);
-				if (result >= 4) {
-					message.channel.send ("You dealt 10 damage!");
-					if (currentPlayer = fighter1) {
-						fighter1health -= 10;
-						currentPlayer = fighter1;
-						duel(fighter1health, fighter2health, currentPlayer);
-					}else{
-						fighter2health -= 10;
-						currentPlayer = fighter2;
-						duel(fighter1health, fighter2health, currentPlayer);
-					}
-				}else{
-					message.channel.send ("Attack unsuccessful. You received 5 damage!");
-					if (currentPlayer = fighter1) {
-						fighter1health -= 5;
-						currentPlayer = fighter1;
-						duel(fighter1health, fighter2health, currentPlayer);
-					}else{
-						fighter2health -= 5;
-						currentPlayer = fighter2;
-						duel(fighter1health, fighter2health, currentPlayer);
-					}
-				}
-			}
-		});
-	})
+//	function duel(fighter1health, fighter2health, currentPlayer) {
+//		if (fighter1health == 0) {
+//			message.channel.send("Game over!" + fighter2 + " wins!");
+//			return;
+//		}else if(fighter2health == 0) {
+//			message.channel.send("Game over!" + fighter1 + " wins!");
+//			return;
+//		}
+//		message.channel.send(currentPlayer + ', would you like to use a sword, spell, or heal?')
+//		.then(() => {
+//		message.channel.awaitMessages(response => response.content == 'sword' && response.author.id == currentPlayer || response.content == 'spell' && response.author.id == currentPlayer || response.content == 'heal' && response.author.id == currentPlayer, {
+//			max: 1,
+//		})
+//		.then((collected) => {
+//			if (collected.first().content == 'sword') {
+//				var result = dice.roll();
+//				message.channel.send("You rolled a " + result);
+//				if (result >= 4) {
+//					message.channel.send ("You dealt 10 damage!");
+//					if (currentPlayer = fighter1) {
+//						fighter1health -= 10;
+//						currentPlayer = fighter1;
+//						duel(fighter1health, fighter2health, currentPlayer);
+//					}else{
+//						fighter2health -= 10;
+//						currentPlayer = fighter2;
+//						duel(fighter1health, fighter2health, currentPlayer);
+//					}
+//				}else{
+//					message.channel.send ("Attack unsuccessful. You received 5 damage!");
+//					if (currentPlayer = fighter1) {
+//						fighter1health -= 5;
+//						currentPlayer = fighter1;
+//						duel(fighter1health, fighter2health, currentPlayer);
+//					}else{
+//						fighter2health -= 5;
+//						currentPlayer = fighter2;
+//						duel(fighter1health, fighter2health, currentPlayer);
+//					}
+//				}
+//			}
+//		});
+//	})
 
-};
+});
 
 client.login (process.env.token);
