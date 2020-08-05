@@ -297,14 +297,14 @@ client.on ("message", (message) => {
     			return randomNumber;
  		}
 	}	
-  	var words = message.content.toLowerCase().trim().match(/\w+|\s+|[^\s\w]+/g);
-  	var containsBadWord = words.some(word => {
-    		return profanitiez.includes(word);
-  	});
-  	if (containsBadWord) {
-    		message.delete(1);
-    		message.channel.send("LANGUAGE <:Soap:436348198093586442>");
-  	}
+//  	var words = message.content.toLowerCase().trim().match(/\w+|\s+|[^\s\w]+/g);
+//	var containsBadWord = words.some(word => {
+//    		return profanitiez.includes(word);
+//  	});
+//  	if (containsBadWord) {
+//    		message.delete(1);
+//   		message.channel.send("LANGUAGE <:Soap:436348198093586442>");
+//  	}
 	
 	if (message.content.startsWith (prefix + "hug")) {
 		if (mention == null) {
